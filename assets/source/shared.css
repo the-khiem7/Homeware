@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=DM+Serif+Display&display=block');
+:root { --paper:#f3efe6; --ink:#1f2328; --muted:#555a61; --line:#1f2328; --accent:#2a715f; --soft:#e6dfcf; --cardline:#c9c1b0; }
+html[data-theme="dark"] { --paper:#191b1f; --ink:#ece7dc; --muted:#a9a59c; --line:#ece7dc; --accent:#6cc7ad; --soft:#25282e; --cardline:#3a3d44; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #888; }
+.sheet { width: max-content; padding: 24px; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.item { zoom: 2; position: relative; overflow: hidden; width: 1200px; height: 400px; font-family: 'IBM Plex Mono', monospace; color: var(--ink); background: var(--paper); }
+.item svg { position: absolute; inset: 0; }
+.t { position: absolute; left: 64px; top: 96px; z-index: 2; }
+.t h1 { margin: 0; font: 400 108px/1 'DM Serif Display', serif; }
+.t p { font-size: 19px; line-height: 1.4; margin: 16px 0 0; color: var(--muted); max-width: 470px; }
+.item.btn { width: max-content; height: 56px; display: flex; align-items: center; gap: 12px; padding: 0 20px 0 14px; font: 400 28px/1 'DM Serif Display', serif; }
+.btn .n { width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: var(--paper); display: flex; align-items: center; justify-content: center; font: 400 20px/1 'IBM Plex Mono', monospace; flex: none; }

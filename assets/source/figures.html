@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Homeware figures</title>
+<!-- Source of ../readme/problem.webp, guide.webp, integrate.webp, contribute.webp and their -dark twins. Render from the repo root with:
+     uvx --from playwright --with pillow python -I <skill-dir>/scripts/render.py assets/source/figures.html --root assets --out assets/readme
+     Signature: see hero.html. Every label comes from the README, CONTRIBUTING.md, the guide template or the Layout table of AGENTS.md. No figure names a guide. -->
+<script src="shared.js"></script>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<div class="sheet">
+
+<!-- problem: default installer versus a Homeware guide -->
+<div class="item" id="problem" style="height:440px">
+  <svg viewBox="0 0 1200 440" fill="none" stroke="var(--line)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
+    <defs>
+      <g id="lock"><rect x="-13" y="-4" width="26" height="22" rx="2" fill="var(--accent)" stroke="none"/><path d="M-8 -4 v-8 a8 8 0 0 1 16 0 v8" stroke="var(--accent)" stroke-width="3.2"/></g>
+      <g id="i-uac"><path d="M22 4 L38 10 V22 C38 32 30 38 22 42 C14 38 6 32 6 22 V10Z"/><path d="M22 14 V25 M22 31 V32" stroke="var(--accent)" stroke-width="3.2"/></g>
+      <g id="i-folder"><path d="M4 12 H18 L22 17 H40 V37 H4Z"/></g>
+      <g id="i-check"><circle cx="22" cy="22" r="17"/><path d="M13 22 l7 7 12 -14" stroke="var(--accent)" stroke-width="3"/></g>
+      <g id="i-home"><path d="M6 22 L22 8 L38 22 M10 20 V38 H34 V20"/><path d="M19 38 V28 H25 V38" stroke="var(--accent)"/></g>
+    </defs>
+    <text x="48" y="58" font-family="DM Serif Display" font-size="34" fill="var(--ink)" stroke="none">The default installer</text>
+    <text x="48" y="86" font-family="IBM Plex Mono" font-size="17" fill="var(--muted)" stroke="none">machine scope, asks for admin</text>
+    <text x="632" y="58" font-family="DM Serif Display" font-size="34" fill="var(--ink)" stroke="none">A Homeware guide</text>
+    <text x="632" y="86" font-family="IBM Plex Mono" font-size="17" fill="var(--muted)" stroke="none">user scope, standard user</text>
+    <rect x="48" y="100" width="520" height="300" rx="6" fill="var(--soft)"/>
+    <rect x="632" y="100" width="520" height="300" rx="6" fill="var(--paper)" stroke="var(--accent)" stroke-width="4"/>
+    <path d="M582 238 L604 250 L582 262" stroke="var(--accent)" stroke-width="4"/>
+    <use href="#i-uac" x="72" y="138"/><use href="#i-folder" x="72" y="228"/><use href="#lock" x="94" y="326"/>
+    <g font-family="IBM Plex Mono" font-size="19" font-weight="600" fill="var(--ink)" stroke="none">
+      <text x="136" y="167">Raises a UAC prompt</text>
+      <text x="136" y="257">Writes to C:\Program Files</text>
+      <text x="136" y="338">A standard user cannot</text>
+      <text x="136" y="362">approve it</text>
+    </g>
+    <use href="#i-check" x="656" y="138"/><use href="#i-folder" x="656" y="218"/><use href="#i-home" x="656" y="308"/>
+    <g font-family="IBM Plex Mono" font-size="19" font-weight="600" fill="var(--ink)" stroke="none">
+      <text x="720" y="167">No UAC prompt</text>
+      <text x="720" y="236">Nothing written to C:\Program Files,</text>
+      <text x="720" y="260">C:\Windows or HKEY_LOCAL_MACHINE</text>
+      <text x="720" y="326">Everything lives in the user profile</text>
+    </g>
+    <text x="720" y="352" font-family="IBM Plex Mono" font-size="17" fill="var(--muted)" stroke="none">%LOCALAPPDATA%\Programs\&lt;App&gt;</text>
+  </svg>
+</div>
+
+<!-- guide: the template every guide follows -->
+<div class="item" id="guide" style="height:480px">
+  <svg viewBox="0 0 1200 480" fill="none" stroke="var(--line)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
+    <defs>
+      <g id="g-table"><rect x="4" y="8" width="36" height="28" rx="2"/><path d="M4 18 H40 M16 18 V36"/></g>
+      <g id="g-uac"><path d="M22 4 L38 10 V22 C38 32 30 38 22 42 C14 38 6 32 6 22 V10Z"/><path d="M22 14 V25 M22 31 V32" stroke="var(--accent)" stroke-width="3.2"/></g>
+      <g id="g-rej"><rect x="6" y="10" width="32" height="26" rx="2" stroke-dasharray="5 4"/><path d="M8 38 L36 8" stroke="var(--accent)" stroke-width="3"/></g>
+      <g id="g-list"><path d="M6 12 l3 3 5 -6 M6 24 l3 3 5 -6 M6 36 l3 3 5 -6 M22 13 H40 M22 25 H40 M22 37 H40"/></g>
+      <g id="g-dl"><path d="M22 6 V28 M12 20 L22 30 L32 20 M8 38 H36"/></g>
+      <g id="g-plug"><path d="M14 4 V14 M30 4 V14 M8 14 H36 V24 a14 12 0 0 1 -28 0Z M22 36 V42"/></g>
+      <g id="g-check"><circle cx="22" cy="22" r="17"/><path d="M13 22 l7 7 12 -14" stroke="var(--accent)" stroke-width="3"/></g>
+      <g id="g-term"><rect x="4" y="8" width="36" height="28" rx="3"/><path d="M11 17 l6 5 -6 5 M21 28 H31"/></g>
+      <g id="g-undo"><path d="M14 12 H28 a10 10 0 0 1 0 20 H12 M20 5 L13 12 L20 19"/></g>
+      <g id="g-find"><circle cx="19" cy="19" r="12"/><path d="M28 28 L40 40" stroke-width="3.2"/></g>
+    </defs>
+    <text x="48" y="58" font-family="DM Serif Display" font-size="34" fill="var(--ink)" stroke="none">Every guide follows one template</text>
+    <text x="48" y="90" font-family="IBM Plex Mono" font-size="17" fill="var(--muted)" stroke="none">templates/guide-template.md becomes guides/&lt;tool-name&gt;/README.md</text>
+    <g fill="var(--soft)">
+      <rect x="48" y="128" width="204" height="148" rx="6"/><rect x="273" y="128" width="204" height="148" rx="6"/><rect x="498" y="128" width="204" height="148" rx="6"/><rect x="723" y="128" width="204" height="148" rx="6"/><rect x="948" y="128" width="204" height="148" rx="6"/>
+      <rect x="48" y="300" width="204" height="148" rx="6"/><rect x="273" y="300" width="204" height="148" rx="6"/><rect x="498" y="300" width="204" height="148" rx="6"/><rect x="723" y="300" width="204" height="148" rx="6"/><rect x="948" y="300" width="204" height="148" rx="6"/>
+    </g>
+    <g stroke="var(--accent)" stroke-width="3">
+      <path d="M257 202 l6 6 -6 6 M482 202 l6 6 -6 6 M707 202 l6 6 -6 6 M932 202 l6 6 -6 6"/>
+      <path d="M257 374 l6 6 -6 6 M482 374 l6 6 -6 6 M707 374 l6 6 -6 6 M932 374 l6 6 -6 6"/>
+      <path d="M1050 276 V288 H150 V298 M144 292 L150 298 L156 292"/>
+    </g>
+    <use href="#g-table" x="128" y="144"/><use href="#g-uac" x="353" y="144"/><use href="#g-rej" x="578" y="144"/><use href="#g-list" x="803" y="144"/><use href="#g-dl" x="1028" y="144"/>
+    <use href="#g-plug" x="128" y="316"/><use href="#g-check" x="353" y="316"/><use href="#g-term" x="578" y="316"/><use href="#g-undo" x="803" y="316"/><use href="#g-find" x="1028" y="316"/>
+    <g font-family="IBM Plex Mono" font-size="17" font-weight="600" fill="var(--ink)" stroke="none" text-anchor="middle">
+      <text x="150" y="216">Summary</text><text x="150" y="238">table</text>
+      <text x="375" y="216">Why the default</text><text x="375" y="238">installer needs</text><text x="375" y="260">admin</text>
+      <text x="600" y="216">Rejected</text><text x="600" y="238">approaches</text>
+      <text x="825" y="227">Prerequisites</text>
+      <text x="1050" y="227">Install</text>
+      <text x="150" y="399">Integrate</text>
+      <text x="375" y="399">Verify</text>
+      <text x="600" y="399">Use</text>
+      <text x="825" y="399">Uninstall</text>
+      <text x="1050" y="399">Troubleshooting</text>
+    </g>
+  </svg>
+</div>
+
+<!-- integrate: the integration steps of the README code block -->
+<div class="item" id="integrate" style="height:470px">
+  <svg viewBox="0 0 1200 470" fill="none" stroke="var(--line)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
+    <text x="48" y="58" font-family="DM Serif Display" font-size="34" fill="var(--ink)" stroke="none">Integrate without admin</text>
+    <text x="48" y="90" font-family="IBM Plex Mono" font-size="17" fill="var(--muted)" stroke="none">the app folder stays in the user profile; Windows is told where it is</text>
+    <rect x="48" y="112" width="330" height="320" rx="6" fill="var(--soft)"/>
+    <path d="M76 160 H110 L118 170 H168 V214 H76Z" fill="var(--paper)"/>
+    <text x="76" y="262" font-family="DM Serif Display" font-size="30" fill="var(--ink)" stroke="none">App folder</text>
+    <g font-family="IBM Plex Mono" font-weight="600" font-size="20" fill="var(--ink)" stroke="none"><text x="76" y="300">%LOCALAPPDATA%\</text><text x="76" y="326">Programs\&lt;App&gt;</text></g>
+    <path d="M378 272 H410 M410 152 V416 M410 152 H440 M410 240 H440 M410 328 H440" stroke="var(--accent)" stroke-width="3" stroke-dasharray="6 6"/>
+    <path d="M410 416 H440" stroke="var(--accent)" stroke-width="3" stroke-dasharray="2 7"/>
+    <g fill="var(--accent)" stroke="none"><circle cx="460" cy="152" r="20"/><circle cx="460" cy="240" r="20"/><circle cx="460" cy="328" r="20"/></g>
+    <circle cx="460" cy="416" r="20" stroke="var(--accent)" stroke-dasharray="4 5" stroke-width="3"/>
+    <g fill="var(--paper)" stroke="none" font-family="IBM Plex Mono" font-size="20" font-weight="600" text-anchor="middle"><text x="460" y="159">1</text><text x="460" y="247">2</text><text x="460" y="335">3</text></g>
+    <path d="M460 408 V424 M452 416 H468" stroke="var(--accent)" stroke-width="3"/>
+    <g font-family="IBM Plex Mono" font-weight="600" font-size="22" fill="var(--ink)" stroke="none">
+      <text x="500" y="150">User PATH</text><text x="500" y="238">Start Menu shortcut</text><text x="500" y="326">Refresh PATH in this terminal</text><text x="500" y="414">File associations, context menu</text>
+    </g>
+    <g font-family="IBM Plex Mono" font-size="17" fill="var(--muted)" stroke="none">
+      <text x="500" y="176">Add the folder to HKCU\Environment, skipping duplicates</text>
+      <text x="500" y="264">%APPDATA%\Microsoft\Windows\Start Menu\Programs\&lt;App&gt;.lnk</text>
+      <text x="500" y="352">Read the user and the machine PATH again</text>
+      <text x="500" y="440">HKCU\Software\Classes, only what applies</text>
+    </g>
+  </svg>
+</div>
+
+<!-- contribute: how to add a guide -->
+<div class="item" id="contribute" style="height:540px">
+  <svg viewBox="0 0 1200 540" fill="none" stroke="var(--line)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
+    <defs><g id="c-check"><circle cx="22" cy="22" r="17"/><path d="M13 22 l7 7 12 -14" stroke="var(--accent)" stroke-width="3"/></g></defs>
+    <text x="48" y="58" font-family="DM Serif Display" font-size="34" fill="var(--ink)" stroke="none">Add a guide</text>
+    <text x="48" y="90" font-family="IBM Plex Mono" font-size="17" fill="var(--muted)" stroke="none">the short path; CONTRIBUTING.md has the full checklist</text>
+    <g transform="translate(0 28)">
+    <g stroke-dasharray="2 7"><path d="M76 136 V178 M76 218 V260 M76 300 V342"/></g>
+    <g fill="var(--accent)" stroke="none"><circle cx="76" cy="116" r="20"/><circle cx="76" cy="198" r="20"/><circle cx="76" cy="280" r="20"/><circle cx="76" cy="362" r="20"/></g>
+    <g fill="var(--paper)" stroke="none" font-family="IBM Plex Mono" font-size="20" font-weight="600" text-anchor="middle"><text x="76" y="123">1</text><text x="76" y="205">2</text><text x="76" y="287">3</text><text x="76" y="369">4</text></g>
+    <g font-family="IBM Plex Mono" font-weight="600" font-size="22" fill="var(--ink)" stroke="none">
+      <text x="116" y="114">Copy the template</text><text x="116" y="196">Fill in every section</text><text x="116" y="278">Add a row to the Guides table</text><text x="116" y="360">Scan before every commit</text>
+    </g>
+    <g font-family="IBM Plex Mono" font-size="17" fill="var(--muted)" stroke="none">
+      <text x="116" y="140">templates/guide-template.md to guides/&lt;tool-name&gt;/README.md</text>
+      <text x="116" y="222">English, instructional tense; scripts go next to the guide</text>
+      <text x="116" y="304">In README.md, sorted by tool name</text>
+      <text x="116" y="386">trivy fs --scanners secret .</text>
+    </g>
+    <rect x="800" y="100" width="352" height="288" rx="6" fill="var(--soft)"/>
+    <text x="828" y="146" font-family="DM Serif Display" font-size="30" fill="var(--ink)" stroke="none">The result</text>
+    <g font-family="IBM Plex Mono" font-weight="600" font-size="20" fill="var(--ink)" stroke="none">
+      <text x="828" y="196">guides/</text><text x="852" y="228">&lt;tool-name&gt;/</text><text x="876" y="260">README.md</text><text x="876" y="292">*.ps1</text>
+    </g>
+    <text x="828" y="332" font-family="IBM Plex Mono" font-size="17" fill="var(--muted)" stroke="none">helper scripts, if the guide</text>
+    <text x="828" y="356" font-family="IBM Plex Mono" font-size="17" fill="var(--muted)" stroke="none">has any</text>
+    </g>
+    <g transform="translate(0 28)">
+    <rect x="48" y="420" width="1104" height="72" rx="6" fill="var(--soft)"/>
+    <use href="#c-check" x="72" y="434"/>
+    <g font-family="IBM Plex Mono" font-size="17" fill="var(--ink)" stroke="none">
+      <text x="136" y="452" font-weight="600">Only include steps you actually ran as a standard user.</text>
+      <text x="136" y="476">If a step is taken from vendor docs and not tested, say so in the guide.</text>
+    </g>
+  </svg>
+</div>
+
+</div>
+</body>
+</html>

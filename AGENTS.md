@@ -10,7 +10,9 @@ Homeware: a public registry of guides for installing developer tools on Windows 
 
 | Path | Contents |
 |---|---|
-| `README.md` | Overview, ground rules, **Guides** index table, general techniques |
+| `README.md` | Hero banner and navigation buttons, overview, **Guides** index table, ground rules, general techniques |
+| `assets/readme/` | Rendered README images as WebP, one light and one `-dark` file per image |
+| `assets/source/` | HTML sources of those images (`shared.css`, `shared.js`, one page per image set); the render command is in each page's header comment |
 | `CONTRIBUTING.md` | How to add a guide, forbidden actions, sanitization checklist |
 | `templates/guide-template.md` | Required skeleton for every guide |
 | `guides/<tool-name>/README.md` | One guide per tool; folder name lowercase and hyphenated |
@@ -54,7 +56,7 @@ Run all of these from the repo root and fix anything they report:
 trivy fs --scanners secret .
 
 # 2. Non-ASCII characters (dashes, smart quotes, non-English text) - expect no output
-Select-String -Path (Get-ChildItem -Recurse -File -Exclude *.png | Where-Object FullName -notmatch '\\.git\\').FullName -Pattern '[^\x00-\x7F]'
+Select-String -Path (Get-ChildItem -Recurse -File -Exclude *.png,*.webp | Where-Object FullName -notmatch '\\.git\\').FullName -Pattern '[^\x00-\x7F]'
 
 # 3. Leftover identifiers - expect only deliberate placeholders
 Select-String -Path (Get-ChildItem -Recurse -File | Where-Object FullName -notmatch '\\.git\\').FullName -Pattern '\b\d{12}\b', '[\w.]+@[\w-]+\.\w+', 'C:\\Users\\(?!<)'
