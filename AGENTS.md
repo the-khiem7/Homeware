@@ -31,6 +31,7 @@ Homeware: a public registry of guides for installing developer tools on Windows 
 
 - Start from `templates/guide-template.md` and keep every section: summary table, why the default installer needs admin, rejected approaches, prerequisites, install, integrate, verify, use, uninstall, troubleshooting. Drop a section only if it truly does not apply.
 - English only, in instructional tense ("Run ...", not "I ran ..." or "was installed on your machine").
+- A guide is guidance, not a journal. Never narrate what happened while the guide was written ("was run as a standard user and completed", "was tested on this machine", "we hit an error"). State what a command does and what the reader must do, in the imperative or present tense. The verification status belongs in the summary table (`Tested version`) and in the rule 6 label for untested steps, not in a past-tense sentence.
 - ASCII only: hyphen `-`, never en or em dashes; no smart quotes.
 - Do not hard-wrap paragraphs. One paragraph is one line.
 - Prefer tables for options, comparisons, verification checks and troubleshooting.
