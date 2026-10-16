@@ -24,8 +24,10 @@ Guides include only steps that were run as a standard user. A step taken from ve
 | Floci CLI | Local cloud emulator | Official installer script, user scope | 0.2.2 | [guides/floci](guides/floci/README.md) |
 | GitHub CLI | Developer CLI | Portable zip, SHA256 verified | 2.102.0 | [guides/github-cli](guides/github-cli/README.md) |
 | GitLab MCP server | Agent tooling | `npx`, no global install | - | [guides/gitlab-mcp](guides/gitlab-mcp/README.md) |
+| Go + Wails 3 CLI | Language toolchain | Portable zip, SHA256 verified + `go install` | Go 1.27.2, Wails v3.0.0-beta.30 | [guides/go-wails3](guides/go-wails3/README.md) |
 | Sublime Text 4 | Editor | Portable zip + `HKCU` integration | Build 4213 | [guides/sublime-text-4](guides/sublime-text-4/README.md) |
 | Trivy | Security scanner | `winget --scope user` | 0.74.0 | [guides/trivy](guides/trivy/README.md) |
+| VS Code startup layout + Claude Code | Editor setup | User settings + per-user Auto Run Command extension | VS Code 1.142.0 | [guides/vscode-claude-code-startup](guides/vscode-claude-code-startup/README.md) |
 
 ## Ground rules
 
