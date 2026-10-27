@@ -20,6 +20,7 @@ Guides include only steps that were run as a standard user. A step taken from ve
 | Tool | Category | Method | Tested version | Guide |
 |---|---|---|---|---|
 | AWS CLI v2 + SSO | Cloud CLI | `msiexec /a` administrative install + `sso-session` config | 2.36.x | [guides/aws-cli-v2-sso](guides/aws-cli-v2-sso/README.md) |
+| Crane | Container registry CLI | Portable archive, SHA256 verified | 0.22.1 | [guides/crane](guides/crane/README.md) |
 | Docker Engine in WSL2 + Portainer | Container runtime | WSL2 distro + Docker apt repository, Portainer CE as GUI | 29.9.0 | [guides/docker-engine-wsl](guides/docker-engine-wsl/README.md) |
 | Floci CLI | Local cloud emulator | Official installer script, user scope | 0.2.2 | [guides/floci](guides/floci/README.md) |
 | GitHub CLI | Developer CLI | Portable zip, SHA256 verified | 2.102.0 | [guides/github-cli](guides/github-cli/README.md) |
