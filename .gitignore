@@ -19,3 +19,6 @@ Thumbs.db
 .vscode/
 *.sublime-workspace
 .frontdoor/
+
+# Machine-specific notes (private, never committed)
+*.local.md
