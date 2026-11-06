@@ -19,6 +19,7 @@ Guides include only steps that were run as a standard user. A step taken from ve
 
 | Tool | Category | Method | Tested version | Guide |
 |---|---|---|---|---|
+| Ansible dev tools in WSL2 | Automation tooling | `uv` tarball (SHA256 verified) + `uv tool install` inside a WSL2 distro | ansible-dev-tools 26.11.0, Checkov 3.4.3 | [guides/ansible-dev-tools-wsl](guides/ansible-dev-tools-wsl/README.md) |
 | AWS CLI v2 + SSO | Cloud CLI | `msiexec /a` administrative install + `sso-session` config | 2.36.x | [guides/aws-cli-v2-sso](guides/aws-cli-v2-sso/README.md) |
 | Claude Code status line | Agent tooling | User settings + Bash script, jq via `winget --scope user` | Claude Code 2.1.302, jq 1.8.2 | [guides/claude-code-statusline](guides/claude-code-statusline/README.md) |
 | Crane | Container registry CLI | Portable archive, SHA256 verified | 0.22.1 | [guides/crane](guides/crane/README.md) |
