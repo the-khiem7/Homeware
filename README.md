@@ -29,6 +29,7 @@ Guides include only steps that were run as a standard user. A step taken from ve
 | GitLab MCP server | Agent tooling | `npx`, no global install | - | [guides/gitlab-mcp](guides/gitlab-mcp/README.md) |
 | Go + Wails 3 CLI | Language toolchain | Portable zip, SHA256 verified + `go install` | Go 1.27.2, Wails v3.0.0-beta.30 | [guides/go-wails3](guides/go-wails3/README.md) |
 | OBS Studio | Screen recording and streaming | Portable zip, SHA256 verified | 33.0.0 | [guides/obs-studio](guides/obs-studio/README.md) |
+| Rust + Tauri 2 | Language toolchain | `rustup-init` + portable MSVC and Windows SDK (`msiexec /a`) + npm Tauri CLI | Rust 1.100.0, Tauri CLI 2.12.5 | [guides/rust-tauri](guides/rust-tauri/README.md) |
 | Sublime Text 4 | Editor | Portable zip + `HKCU` integration | Build 4213 | [guides/sublime-text-4](guides/sublime-text-4/README.md) |
 | Trivy | Security scanner | `winget --scope user` | 0.74.0 | [guides/trivy](guides/trivy/README.md) |
 | VS Code startup layout + Claude Code | Editor setup | User settings + per-user Auto Run Command extension | VS Code 1.142.0 | [guides/vscode-claude-code-startup](guides/vscode-claude-code-startup/README.md) |
