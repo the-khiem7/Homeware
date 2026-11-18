@@ -59,6 +59,7 @@ Guides include only steps that were run as a standard user. A step taken from ve
 |---|---|---|---|
 | Go + Wails 3 CLI | Portable zip, SHA256 verified + `go install` | Go 1.27.2, Wails v3.0.0-beta.30 | [guides/languages/go-wails3](guides/languages/go-wails3/README.md) |
 | Rust + Tauri 2 | `rustup-init` + portable MSVC and Windows SDK (`msiexec /a`) + npm Tauri CLI | Rust 1.100.0, Tauri CLI 2.12.5 | [guides/languages/rust-tauri](guides/languages/rust-tauri/README.md) |
+| uv | Official installer script, reviewed first, user scope | 0.13.9 | [guides/languages/uv](guides/languages/uv/README.md) |
 
 ### media
 
