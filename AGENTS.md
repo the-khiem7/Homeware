@@ -10,13 +10,13 @@ Homeware: a public registry of guides for installing developer tools on Windows 
 
 | Path | Contents |
 |---|---|
-| `README.md` | Hero banner and navigation buttons, overview, **Guides** index table, ground rules, general techniques |
+| `README.md` | Hero banner and navigation buttons, overview, **Guides** index tables (one per topic), ground rules, general techniques |
 | `assets/readme/` | Rendered README images as WebP, one light and one `-dark` file per image |
 | `assets/source/` | HTML sources of those images (`shared.css`, `shared.js`, one page per image set); the render command is in each page's header comment |
 | `CONTRIBUTING.md` | How to add a guide, forbidden actions, sanitization checklist |
 | `templates/guide-template.md` | Required skeleton for every guide |
-| `guides/<tool-name>/README.md` | One guide per tool; folder name lowercase and hyphenated |
-| `guides/<tool-name>/*.ps1` | Optional helper scripts for that guide |
+| `guides/<topic>/<tool-name>/README.md` | One guide per tool, nested in a topic folder (`cloud`, `containers`, `languages`, `agents`, `editors`, `devops-tools`, `media`, or a new one); topic and folder names lowercase and hyphenated |
+| `guides/<topic>/<tool-name>/*.ps1` | Optional helper scripts for that guide |
 
 ## Hard rules
 
@@ -38,7 +38,7 @@ Homeware: a public registry of guides for installing developer tools on Windows 
 - Record rejected approaches with the reason, so they are not proposed again.
 - Every guide has an **Uninstall** section that reverses every change: files, user PATH entry, Start Menu shortcut and `HKCU` keys.
 - Keep tested version numbers and official download URLs; they are public information.
-- Add or update the row in the `README.md` **Guides** table (sorted by tool name) in the same change.
+- Add or update the row in the `README.md` **Guides** table of the guide's topic (one table per topic, sorted by tool name; add a new topic heading when you add a new topic folder) in the same change.
 
 ## PowerShell conventions
 
@@ -66,7 +66,7 @@ Select-String -Path (Get-ChildItem -Recurse -File | Where-Object FullName -notma
 Get-ChildItem guides -Recurse -Filter *.ps1 | ForEach-Object { $null = [ScriptBlock]::Create((Get-Content -Raw $_.FullName)) }
 ```
 
-Also check by eye that every link in the `README.md` **Guides** table points to an existing `guides/<tool-name>/README.md`.
+Also check by eye that every link in the `README.md` **Guides** table points to an existing `guides/<topic>/<tool-name>/README.md`.
 
 ## Git
 

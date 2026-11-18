@@ -15,24 +15,56 @@ Guides include only steps that were run as a standard user. A step taken from ve
 
 ## Guides
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/guide-dark.webp"><img src="assets/readme/guide.webp" alt="Every guide follows one template: templates/guide-template.md becomes guides/&lt;tool-name&gt;/README.md. The sections, in order: summary table, why the default installer needs admin, rejected approaches, prerequisites, install, integrate, verify, use, uninstall, troubleshooting." width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/guide-dark.webp"><img src="assets/readme/guide.webp" alt="Every guide follows one template: templates/guide-template.md becomes guides/&lt;topic&gt;/&lt;tool-name&gt;/README.md. The sections, in order: summary table, why the default installer needs admin, rejected approaches, prerequisites, install, integrate, verify, use, uninstall, troubleshooting." width="100%"></picture>
 
-| Tool | Category | Method | Tested version | Guide |
-|---|---|---|---|---|
-| Ansible dev tools in WSL2 | Automation tooling | `uv` tarball (SHA256 verified) + `uv tool install` inside a WSL2 distro | ansible-dev-tools 26.11.0, Checkov 3.4.3 | [guides/ansible-dev-tools-wsl](guides/ansible-dev-tools-wsl/README.md) |
-| AWS CLI v2 + SSO | Cloud CLI | `msiexec /a` administrative install + `sso-session` config | 2.36.x | [guides/aws-cli-v2-sso](guides/aws-cli-v2-sso/README.md) |
-| Claude Code status line | Agent tooling | User settings + Bash script, jq via `winget --scope user` | Claude Code 2.1.302, jq 1.8.2 | [guides/claude-code-statusline](guides/claude-code-statusline/README.md) |
-| Crane | Container registry CLI | Portable archive, SHA256 verified | 0.22.1 | [guides/crane](guides/crane/README.md) |
-| Docker Engine in WSL2 + Portainer | Container runtime | WSL2 distro + Docker apt repository, Portainer CE as GUI | 29.9.0 | [guides/docker-engine-wsl](guides/docker-engine-wsl/README.md) |
-| Floci CLI | Local cloud emulator | Official installer script, user scope | 0.2.2 | [guides/floci](guides/floci/README.md) |
-| GitHub CLI | Developer CLI | Portable zip, SHA256 verified | 2.102.0 | [guides/github-cli](guides/github-cli/README.md) |
-| GitLab MCP server | Agent tooling | `npx`, no global install | - | [guides/gitlab-mcp](guides/gitlab-mcp/README.md) |
-| Go + Wails 3 CLI | Language toolchain | Portable zip, SHA256 verified + `go install` | Go 1.27.2, Wails v3.0.0-beta.30 | [guides/go-wails3](guides/go-wails3/README.md) |
-| OBS Studio | Screen recording and streaming | Portable zip, SHA256 verified | 33.0.0 | [guides/obs-studio](guides/obs-studio/README.md) |
-| Rust + Tauri 2 | Language toolchain | `rustup-init` + portable MSVC and Windows SDK (`msiexec /a`) + npm Tauri CLI | Rust 1.100.0, Tauri CLI 2.12.5 | [guides/rust-tauri](guides/rust-tauri/README.md) |
-| Sublime Text 4 | Editor | Portable zip + `HKCU` integration | Build 4213 | [guides/sublime-text-4](guides/sublime-text-4/README.md) |
-| Trivy | Security scanner | `winget --scope user` | 0.74.0 | [guides/trivy](guides/trivy/README.md) |
-| VS Code startup layout + Claude Code | Editor setup | User settings + per-user Auto Run Command extension | VS Code 1.142.0 | [guides/vscode-claude-code-startup](guides/vscode-claude-code-startup/README.md) |
+### agents
+
+| Tool | Method | Tested version | Guide |
+|---|---|---|---|
+| Claude Code status line | User settings + Bash script, jq via `winget --scope user` | Claude Code 2.1.302, jq 1.8.2 | [guides/agents/claude-code-statusline](guides/agents/claude-code-statusline/README.md) |
+| GitLab MCP server | `npx`, no global install | - | [guides/agents/gitlab-mcp](guides/agents/gitlab-mcp/README.md) |
+
+### cloud
+
+| Tool | Method | Tested version | Guide |
+|---|---|---|---|
+| AWS CLI v2 + SSO | `msiexec /a` administrative install + `sso-session` config | 2.36.x | [guides/cloud/aws-cli-v2-sso](guides/cloud/aws-cli-v2-sso/README.md) |
+| Floci CLI | Official installer script, user scope | 0.2.2 | [guides/cloud/floci](guides/cloud/floci/README.md) |
+
+### containers
+
+| Tool | Method | Tested version | Guide |
+|---|---|---|---|
+| Crane | Portable archive, SHA256 verified | 0.22.1 | [guides/containers/crane](guides/containers/crane/README.md) |
+| Docker Engine in WSL2 + Portainer | WSL2 distro + Docker apt repository, Portainer CE as GUI | 29.9.0 | [guides/containers/docker-engine-wsl](guides/containers/docker-engine-wsl/README.md) |
+
+### devops-tools
+
+| Tool | Method | Tested version | Guide |
+|---|---|---|---|
+| Ansible dev tools in WSL2 | `uv` tarball (SHA256 verified) + `uv tool install` inside a WSL2 distro | ansible-dev-tools 26.11.0, Checkov 3.4.3 | [guides/devops-tools/ansible-dev-tools-wsl](guides/devops-tools/ansible-dev-tools-wsl/README.md) |
+| GitHub CLI | Portable zip, SHA256 verified | 2.102.0 | [guides/devops-tools/github-cli](guides/devops-tools/github-cli/README.md) |
+| Trivy | `winget --scope user` | 0.74.0 | [guides/devops-tools/trivy](guides/devops-tools/trivy/README.md) |
+
+### editors
+
+| Tool | Method | Tested version | Guide |
+|---|---|---|---|
+| Sublime Text 4 | Portable zip + `HKCU` integration | Build 4213 | [guides/editors/sublime-text-4](guides/editors/sublime-text-4/README.md) |
+| VS Code startup layout + Claude Code | User settings + per-user Auto Run Command extension | VS Code 1.142.0 | [guides/editors/vscode-claude-code-startup](guides/editors/vscode-claude-code-startup/README.md) |
+
+### languages
+
+| Tool | Method | Tested version | Guide |
+|---|---|---|---|
+| Go + Wails 3 CLI | Portable zip, SHA256 verified + `go install` | Go 1.27.2, Wails v3.0.0-beta.30 | [guides/languages/go-wails3](guides/languages/go-wails3/README.md) |
+| Rust + Tauri 2 | `rustup-init` + portable MSVC and Windows SDK (`msiexec /a`) + npm Tauri CLI | Rust 1.100.0, Tauri CLI 2.12.5 | [guides/languages/rust-tauri](guides/languages/rust-tauri/README.md) |
+
+### media
+
+| Tool | Method | Tested version | Guide |
+|---|---|---|---|
+| OBS Studio | Portable zip, SHA256 verified | 33.0.0 | [guides/media/obs-studio](guides/media/obs-studio/README.md) |
 
 ## Ground rules
 
@@ -79,7 +111,7 @@ $sc.TargetPath = "$dir\<app>.exe"; $sc.Save()
 $env:Path = [Environment]::GetEnvironmentVariable("Path", "User") + ";" + [Environment]::GetEnvironmentVariable("Path", "Machine")
 ```
 
-File associations and context-menu entries go under `HKCU\Software\Classes` - see the [Sublime Text guide](guides/sublime-text-4/README.md) for a full example.
+File associations and context-menu entries go under `HKCU\Software\Classes` - see the [Sublime Text guide](guides/editors/sublime-text-4/README.md) for a full example.
 
 ## Contributing
 

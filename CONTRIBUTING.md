@@ -2,10 +2,10 @@
 
 ## Adding a guide
 
-1. Copy [templates/guide-template.md](templates/guide-template.md) to `guides/<tool-name>/README.md` (lowercase, hyphenated folder name).
+1. Copy [templates/guide-template.md](templates/guide-template.md) to `guides/<topic>/<tool-name>/README.md` (lowercase, hyphenated folder names). Pick an existing topic folder (`cloud`, `containers`, `languages`, `agents`, `editors`, `devops-tools`, `media`) or create a new one.
 2. Fill in every section. Write in English, in instructional tense ("Run ...", not "I ran ...").
-3. Put helper scripts next to the guide (`guides/<tool-name>/*.ps1`). Messages and comments in English.
-4. Add a row to the **Guides** table in [README.md](README.md), keeping it sorted by tool name.
+3. Put helper scripts next to the guide (`guides/<topic>/<tool-name>/*.ps1`). Messages and comments in English.
+4. Add a row to the table of your topic in the **Guides** section of [README.md](README.md), keeping it sorted by tool name. A new topic gets its own heading and table.
 5. Only include steps you actually ran as a standard user. If a step is taken from vendor docs and not tested, say so in the guide.
 
 ## What a guide must not need
