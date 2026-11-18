@@ -79,5 +79,5 @@ Status: complete. `docker.cmd` and the user PATH entry exist; in a new PowerShel
 
 ## Next action
 
-1. Phase 8: the user commits the guide and pack changes, including `guides/docker-engine-wsl/open-portainer.ps1`. The guide's Integrate section must match PT-D16.
+1. Phase 8: the user commits the guide and pack changes, including `guides/containers/docker-engine-wsl/open-portainer.ps1`. The guide's Integrate section must match PT-D16.
 2. PT-Q6 (Docker Hub terms for organisational anonymous pulls) stays open until the user resumes it.

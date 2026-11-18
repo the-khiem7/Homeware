@@ -11,7 +11,7 @@ code_ref: "uncommitted"
 
 ## Scope
 
-Replace Docker Desktop on one Windows workstation with Docker Engine running in a WSL2 distro and Portainer CE as the GUI, using only standard-user rights. In scope: the workstation setup, the guide `guides/docker-engine-wsl/README.md`, its row in the `README.md` Guides table. Out of scope: Kubernetes, a Windows-side `docker.exe` (a `docker.cmd` wrapper covers the need, PT-D20), Edge Compute, production hosting.
+Replace Docker Desktop on one Windows workstation with Docker Engine running in a WSL2 distro and Portainer CE as the GUI, using only standard-user rights. In scope: the workstation setup, the guide `guides/containers/docker-engine-wsl/README.md`, its row in the `README.md` Guides table. Out of scope: Kubernetes, a Windows-side `docker.exe` (a `docker.cmd` wrapper covers the need, PT-D20), Edge Compute, production hosting.
 
 ## Origin
 
