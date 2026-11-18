@@ -1,4 +1,4 @@
-<h1 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/hero-dark.webp"><img src="assets/readme/hero.webp" alt="Homeware - make yourself at home on a locked-down machine. Illustration: an isometric room with a locked door, a shelf and a desk, furnished with numbered parts; the label %LOCALAPPDATA% marks it as the place where everything goes." width="100%"></picture></h1>
+<h1 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/hero-dark.gif"><img src="assets/readme/hero.gif" alt="Homeware - make yourself at home on a locked-down machine. Animation: a grey building with a padlock stands beside a green toy-brick baseplate. A coral desk, a violet part and a lemon shelf snap on one by one as numbered steps 1 to 3, followed by a chair, a rug, a lamp, a plant and a few loose bricks. A lemon name tile printed %LOCALAPPDATA% appears in front of the baseplate, and then the bricks lift off and the loop repeats. The padlock on the building never changes." width="100%"></picture></h1>
 
 <p align="center">
 <a href="#guides"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/btn-guides-dark.webp"><img src="assets/readme/btn-guides.webp" alt="1 Guides" height="40"></picture></a>
@@ -15,7 +15,7 @@ Guides include only steps that were run as a standard user. A step taken from ve
 
 ## Guides
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/guide-dark.webp"><img src="assets/readme/guide.webp" alt="Every guide follows one template: templates/guide-template.md becomes guides/&lt;topic&gt;/&lt;tool-name&gt;/README.md. The sections, in order: summary table, why the default installer needs admin, rejected approaches, prerequisites, install, integrate, verify, use, uninstall, troubleshooting." width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/guide-dark.webp"><img src="assets/readme/guide.webp" alt="Every guide follows one template, shown as a row of numbered bricks: templates/guide-template.md becomes guides/&lt;topic&gt;/&lt;tool-name&gt;/README.md. The sections, in order: summary table, why the default installer needs admin, rejected approaches, prerequisites, install, integrate, verify, use, uninstall, troubleshooting." width="100%"></picture>
 
 ### agents
 
@@ -69,7 +69,7 @@ Guides include only steps that were run as a standard user. A step taken from ve
 
 ## Ground rules
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/rules-dark.webp"><img src="assets/readme/rules.webp" alt="Cross-section of a building. The left side, The building, holds three locked floors that need admin rights, so ask IT: C:\Program Files, C:\Windows and HKEY_LOCAL_MACHINE. The right side, Your room, is the user profile for a standard user and holds %LOCALAPPDATA%, %APPDATA%, %USERPROFILE% and HKEY_CURRENT_USER." width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/rules-dark.webp"><img src="assets/readme/rules.webp" alt="Two columns made of toy bricks. The left column, The building (machine scope: needs admin, ask IT), is three grey bricks, each with a padlock: C:\Program Files, C:\Windows and HKEY_LOCAL_MACHINE. The right column, Your room (user profile: standard user), is a green baseplate with four open colored bricks: %LOCALAPPDATA%, %APPDATA%, %USERPROFILE% and HKEY_CURRENT_USER." width="100%"></picture>
 
 - Everything lives in the user profile: `%LOCALAPPDATA%`, `%APPDATA%`, `%USERPROFILE%` and `HKEY_CURRENT_USER`.
 - These guides use features Windows provides for per-user installs. They **do not** bypass UAC, disable security controls or exploit anything. If a tool genuinely needs admin rights (drivers, services, Docker Desktop, Hyper-V/WSL), ask your IT team instead.
@@ -116,7 +116,7 @@ File associations and context-menu entries go under `HKCU\Software\Classes` - se
 
 ## Contributing
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/contribute-dark.webp"><img src="assets/readme/contribute.webp" alt="Add a guide, the short path from CONTRIBUTING.md. Step 1, copy the template: templates/guide-template.md to guides/&lt;tool-name&gt;/README.md. Step 2, fill in every section, in English and instructional tense; helper scripts go next to the guide. Step 3, add a row to the Guides table in README.md, sorted by tool name. Step 4, scan before every commit with trivy fs --scanners secret . The result is guides/&lt;tool-name&gt; holding README.md and any *.ps1 helper scripts. Only include steps you actually ran as a standard user; if a step is taken from vendor docs and not tested, say so in the guide." width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/contribute-dark.webp"><img src="assets/readme/contribute.webp" alt="Add a guide, the short path from CONTRIBUTING.md. Step 1, copy the template: templates/guide-template.md to guides/&lt;topic&gt;/&lt;tool-name&gt;/README.md. Step 2, fill in every section, in English and instructional tense; helper scripts go next to the guide. Step 3, add a row to the Guides table in README.md, sorted by tool name. Step 4, scan before every commit with trivy fs --scanners secret . The result is guides/&lt;topic&gt;/&lt;tool-name&gt; holding README.md and any *.ps1 helper scripts. Only include steps you actually ran as a standard user; if a step is taken from vendor docs and not tested, say so in the guide." width="100%"></picture>
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) and start from [templates/guide-template.md](templates/guide-template.md).
 
