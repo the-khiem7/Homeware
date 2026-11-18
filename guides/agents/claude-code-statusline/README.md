@@ -63,7 +63,7 @@ winget install --id jqlang.jq --exact --scope user
 Run from the root of this repository:
 
 ```powershell
-Copy-Item .\guides\claude-code-statusline\statusline.sh "$env:USERPROFILE\.claude\statusline.sh"
+Copy-Item .\guides\agents\claude-code-statusline\statusline.sh "$env:USERPROFILE\.claude\statusline.sh"
 ```
 
 Read the script before using it. It runs on every status line refresh and reads the session transcript to count dialogue characters. It writes only counters to `%TEMP%\claude-statusline\<session-id>.state`, never conversation text.

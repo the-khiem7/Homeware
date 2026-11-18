@@ -11,7 +11,7 @@
 
 ## Why the default installer needs admin
 
-Ansible's control node (the machine that runs `ansible-playbook`, `ansible-lint` and Molecule) is a Linux or macOS machine. The usual answer on Windows is WSL2, which is a Windows feature that needs administrator rights once, so this guide treats an already enabled WSL2 and an Ubuntu distro as a prerequisite. See the [Docker Engine in WSL2](../docker-engine-wsl/README.md) guide for the distro.
+Ansible's control node (the machine that runs `ansible-playbook`, `ansible-lint` and Molecule) is a Linux or macOS machine. The usual answer on Windows is WSL2, which is a Windows feature that needs administrator rights once, so this guide treats an already enabled WSL2 and an Ubuntu distro as a prerequisite. See the [Docker Engine in WSL2](../../containers/docker-engine-wsl/README.md) guide for the distro.
 
 Inside the distro the vendor route is `sudo apt install python3-venv python3-pip` and then `pip install`. Ubuntu ships `venv` and `pip` as separate apt packages, and `sudo` inside the distro needs the distro user's password, which a locked-down setup may not hand out. `uv` needs neither.
 
