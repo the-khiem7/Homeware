@@ -5,45 +5,33 @@
 <title>Homeware install techniques</title>
 <!-- Source of ../readme/techniques.webp and ../readme/techniques-dark.webp. Render from the repo root with:
      uvx --from playwright --with pillow python -I <skill-dir>/scripts/render.py assets/source/techniques.html --root assets --out assets/readme
-     Signature: see hero.html. Rows, conditions and the ask-IT branch come from the General techniques table and the Ground rules of the README. -->
+     Signature: see hero.html (toy bricks, sky-blue ground, Syne and DM Mono). Rows, conditions and the ask-IT branch come from the General techniques table and the Ground rules of the README. -->
 <script src="shared.js"></script>
+<script src="bricks.js"></script>
 <link rel="stylesheet" href="shared.css">
 </head>
 <body>
 <div class="sheet">
-<div class="item" id="techniques" style="height:580px">
-  <svg viewBox="0 0 1200 580" fill="none" stroke="var(--line)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
-    <defs><g id="lock"><rect x="-13" y="-4" width="26" height="22" rx="2" fill="var(--accent)" stroke="none"/><path d="M-8 -4 v-8 a8 8 0 0 1 16 0 v8" stroke="var(--accent)" stroke-width="3.2"/></g></defs>
-    <text x="116" y="40" font-family="IBM Plex Mono" font-size="17" font-weight="600" letter-spacing="1" fill="var(--accent)" stroke="none">TRY IN ORDER</text>
-    <g stroke-dasharray="2 7"><path d="M76 108 V150 M76 190 V232 M76 272 V314 M76 354 V396 M76 436 V472"/></g>
-    <g font-family="IBM Plex Mono" font-size="17" fill="var(--muted)" stroke="none"><text x="92" y="136">no</text><text x="92" y="218">no</text><text x="92" y="300">no</text><text x="92" y="382">no</text><text x="92" y="464">no</text></g>
-    <g stroke="var(--accent)" stroke-width="3"><path d="M740 88 H900 M740 170 H900 M740 252 H900 M740 334 H900 M740 416 H900 M900 88 V416 M900 252 H930"/></g>
-    <g font-family="IBM Plex Mono" font-size="17" fill="var(--accent)" stroke="none" font-weight="600"><text x="756" y="78">yes</text><text x="756" y="160">yes</text><text x="756" y="242">yes</text><text x="756" y="324">yes</text><text x="756" y="406">yes</text></g>
-    <g fill="var(--accent)" stroke="none"><circle cx="76" cy="88" r="20"/><circle cx="76" cy="170" r="20"/><circle cx="76" cy="252" r="20"/><circle cx="76" cy="334" r="20"/><circle cx="76" cy="416" r="20"/></g>
-    <g fill="var(--paper)" stroke="none" font-family="IBM Plex Mono" font-size="20" font-weight="600" text-anchor="middle"><text x="76" y="95">1</text><text x="76" y="177">2</text><text x="76" y="259">3</text><text x="76" y="341">4</text><text x="76" y="423">5</text></g>
-    <g font-family="IBM Plex Mono" font-weight="600" font-size="22" fill="var(--ink)" stroke="none">
-      <text x="116" y="86">winget install --id &lt;id&gt; --scope user</text>
-      <text x="116" y="168">Official portable zip</text>
-      <text x="116" y="250">Administrative install: msiexec /a</text>
-      <text x="116" y="332">Language package managers, user mode</text>
-      <text x="116" y="414">Per-user installer script</text>
-    </g>
-    <g font-family="IBM Plex Mono" font-size="17" fill="var(--muted)" stroke="none">
-      <text x="116" y="112">The package has a user-scope installer</text>
-      <text x="116" y="194">The vendor ships a zip build</text>
-      <text x="116" y="276">Only a machine-wide MSI exists and the app is self-contained</text>
-      <text x="116" y="358">CLI tools published to npm, PyPI, etc.</text>
-      <text x="116" y="440">The vendor script installs under the user profile</text>
-    </g>
-    <rect x="930" y="182" width="230" height="140" rx="6" fill="var(--soft)"/>
-    <text x="950" y="222" font-family="DM Serif Display" font-size="30" fill="var(--ink)" stroke="none">Integrate</text>
-    <g font-family="IBM Plex Mono" font-size="17" fill="var(--ink)" stroke="none"><text x="950" y="254">user PATH</text><text x="950" y="278">Start Menu shortcut</text><text x="950" y="302">HKCU keys</text></g>
-    <rect x="48" y="480" width="900" height="64" rx="6" fill="var(--soft)"/>
-    <use href="#lock" x="84" y="514"/>
-    <text x="124" y="524" font-family="DM Serif Display" font-size="32" fill="var(--ink)" stroke="none">Ask IT</text>
-    <text x="244" y="518" font-family="IBM Plex Mono" font-size="17" fill="var(--muted)" stroke="none">Drivers, services, Docker Desktop, Hyper-V/WSL need admin rights</text>
-  </svg>
+<div class="item" id="techniques" style="height:660px"><svg viewBox="0 0 1200 660" id="g-techniques"></svg></div>
 </div>
-</div>
+<script>
+var h = '';
+var rows = [['lemon', 'winget install --id <id> --scope user', 'The package has a user-scope installer'], ['coral', 'Official portable zip', 'The vendor ships a zip build'], ['violet', 'Administrative install: msiexec /a', 'Only a machine-wide MSI exists and the app is self-contained'], ['green', 'Language package managers, user mode', 'CLI tools published to npm, PyPI, etc.'], ['white', 'Per-user installer script', 'The vendor script installs under the user profile']];
+h += T(48, 44, 'TRY IN ORDER', 17, { ls: 1.5 });
+rows.forEach(function (r, i) {
+  var x = 48, y = 70 + i * 96, my = y + 34;
+  h += fb(x, y, 660, 68, FLAT[r[0]], { n: 6 });
+  h += '<g transform="translate(' + (x + 34) + ' ' + my + ')"><circle r="16" fill="' + ONBRICK + '"/><text y="7" text-anchor="middle" font-family="DM Mono" font-size="19" font-weight="500" fill="#fff">' + (i + 1) + '</text></g>';
+  h += T(x + 68, y + 29, r[1], 20, { fill: ONBRICK }) + T(x + 68, y + 53, r[2], 15, { fill: ONBRICK });
+  h += dots('M708 ' + my + ' H800', 3) + T(722, my - 10, 'yes', 16, {});
+  h += dots('M78 ' + (y + 70) + ' V' + (y + 94), 3) + T(96, y + 83, 'no', 15, { fill: 'var(--muted)' });
+});
+h += dots('M800 104 V488 M800 295 H890', 3);
+h += fb(890, 200, 262, 190, FLAT.mint, { n: 4 });
+h += H(912, 244, 'Integrate', 20, { fill: ONBRICK }) + T(912, 282, 'user PATH', 17, { fill: ONBRICK }) + T(912, 310, 'Start Menu shortcut', 17, { fill: ONBRICK }) + T(912, 338, 'HKCU keys', 17, { fill: ONBRICK });
+h += fb(48, 576, 1104, 64, 'var(--gl)', { n: 12 });
+h += LOCK(88, 604, 1.1) + H(124, 618, 'Ask IT', 22, {}) + T(260, 616, 'Drivers, services, Docker Desktop, Hyper-V/WSL need admin rights', 17, {});
+mount('g-techniques', h);
+</script>
 </body>
 </html>

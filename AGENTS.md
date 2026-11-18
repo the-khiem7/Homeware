@@ -12,7 +12,7 @@ Homeware: a public registry of guides for installing developer tools on Windows 
 |---|---|
 | `README.md` | Hero banner and navigation buttons, overview, **Guides** index tables (one per topic), ground rules, general techniques |
 | `assets/readme/` | Rendered README images as WebP, one light and one `-dark` file per image |
-| `assets/source/` | HTML sources of those images (`shared.css`, `shared.js`, one page per image set); the render command is in each page's header comment |
+| `assets/source/` | HTML sources of those images (`shared.css`, `shared.js`, `bricks.js` with the shared brick drawing helpers, one page per image set); the render command is in each page's header comment |
 | `CONTRIBUTING.md` | How to add a guide, forbidden actions, sanitization checklist |
 | `templates/guide-template.md` | Required skeleton for every guide |
 | `guides/<topic>/<tool-name>/README.md` | One guide per tool, nested in a topic folder (`cloud`, `containers`, `languages`, `agents`, `editors`, `devops-tools`, `media`, or a new one); topic and folder names lowercase and hyphenated |

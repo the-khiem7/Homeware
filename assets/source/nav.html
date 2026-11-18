@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <title>Homeware navigation buttons</title>
 <!-- Source of ../readme/btn-*.webp. Render from the repo root with:
-     uvx --from playwright --with pillow python -I <skill-dir>/scripts/render.py assets/source/nav.html --root assets --out assets/readme
-     Signature: see hero.html. The numbers follow the order of the README sections. -->
+     python -I assets/source/render-nav.py   (transparent background, so only the bricks show on any page colour)
+     Signature: see hero.html (toy bricks, sky-blue ground, Syne and DM Mono). Each button is one brick with studs; the numbers follow the order of the README sections. -->
 <script src="shared.js"></script>
 <link rel="stylesheet" href="shared.css">
 </head>
 <body>
 <div class="sheet">
-<div class="item btn" id="btn-guides"><span class="n">1</span>Guides</div>
-<div class="item btn" id="btn-rules"><span class="n">2</span>Ground rules</div>
-<div class="item btn" id="btn-techniques"><span class="n">3</span>Techniques</div>
-<div class="item btn" id="btn-contributing"><span class="n">4</span>Contributing</div>
+<div class="item btn" id="btn-guides"><div class="b" style="background:#ff5a4e"><i style="left:14px"></i><i style="left:48px"></i><span class="n">1</span>Guides</div></div>
+<div class="item btn" id="btn-rules"><div class="b" style="background:#ffd23f"><i style="left:14px"></i><i style="left:48px"></i><i style="left:82px"></i><span class="n">2</span>Ground rules</div></div>
+<div class="item btn" id="btn-techniques"><div class="b" style="background:#34c9a0"><i style="left:14px"></i><i style="left:48px"></i><i style="left:82px"></i><span class="n">3</span>Techniques</div></div>
+<div class="item btn" id="btn-contributing"><div class="b" style="background:#a79eff"><i style="left:14px"></i><i style="left:48px"></i><i style="left:82px"></i><span class="n">4</span>Contributing</div></div>
 </div>
 </body>
 </html>
