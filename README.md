@@ -45,6 +45,7 @@ Guides include only steps that were run as a standard user. A step taken from ve
 |---|---|---|---|
 | Ansible dev tools in WSL2 | `uv` tarball (SHA256 verified) + `uv tool install` inside a WSL2 distro | ansible-dev-tools 26.11.0, Checkov 3.4.3 | [guides/devops-tools/ansible-dev-tools-wsl](guides/devops-tools/ansible-dev-tools-wsl/README.md) |
 | GitHub CLI | Portable zip, SHA256 verified | 2.102.0 | [guides/devops-tools/github-cli](guides/devops-tools/github-cli/README.md) |
+| Terraform | `winget --scope user` + user PATH entry | 1.17.1 | [guides/devops-tools/terraform](guides/devops-tools/terraform/README.md) |
 | Trivy | `winget --scope user` | 0.74.0 | [guides/devops-tools/trivy](guides/devops-tools/trivy/README.md) |
 
 ### editors
