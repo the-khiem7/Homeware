@@ -30,6 +30,7 @@ Guides include only steps that were run as a standard user. A step taken from ve
 |---|---|---|---|
 | AWS CLI v2 + SSO | `msiexec /a` administrative install + `sso-session` config | 2.36.x | [guides/cloud/aws-cli-v2-sso](guides/cloud/aws-cli-v2-sso/README.md) |
 | Floci CLI | Official installer script, user scope | 0.2.2 | [guides/cloud/floci](guides/cloud/floci/README.md) |
+| Session Manager plugin | Portable zip, Authenticode signature checked, user PATH entry | 1.2.896.0 | [guides/cloud/session-manager-plugin](guides/cloud/session-manager-plugin/README.md) |
 
 ### containers
 
